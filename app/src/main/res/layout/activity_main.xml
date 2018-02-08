@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rs2systems.timeclocklayouttest.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="208dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/app_name"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="26dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/accountHolder_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Robert Scott SR"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textClock2"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textClock" />
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/gridPasscode"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/accountHolder_textView">
+
+        <TextView
+            android:id="@+id/textPassCode1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#8888"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/textPassCode2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#8888"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/textPassCode3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#8888"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/textPassCode4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#8888"
+            android:gravity="center"/>
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/gridNumberPad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_centerHorizontal="true"
+        android:columnCount="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridPasscode">
+
+        <Button
+            android:id="@+id/btn1"
+            android:onClick="numberPressed"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:onClick="numberPressed"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:onClick="numberPressed"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:onClick="numberPressed"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:onClick="numberPressed"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:onClick="numberPressed"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:onClick="numberPressed"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:onClick="numberPressed"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:onClick="numberPressed"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:onClick="numberPressed"
+            android:text="Clear" />
+
+        <Button
+            android:id="@+id/btn0"
+            android:onClick="numberPressed"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnDel"
+            android:onClick="numberPressed"
+            android:text="Del" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnCheckIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkin"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/gridNumberPad" />
+
+    <Button
+        android:id="@+id/btnCheckOUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkout"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/gridNumberPad"
+        android:layout_marginRight="12dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckIN" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckOUT" />
+
+
+</android.support.constraint.ConstraintLayout>
