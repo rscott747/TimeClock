@@ -136,10 +136,21 @@ public class MainActivity extends AppCompatActivity {
                         //tableToString(SQLiteDatabase db, String tableName);
                         //printDataBase();
 
+                        
+
                     } else
                         db.addEmployee(new Employee(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]));
                     Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKIN"
                             , Toast.LENGTH_LONG).show();
+//                    TextView code1 = (TextView) findViewById(R.id.textPassCode1);
+//                    TextView code2 = (TextView) findViewById(R.id.textPassCode2);
+//                    TextView code3 = (TextView) findViewById(R.id.textPassCode3);
+//                    TextView code4 = (TextView) findViewById(R.id.textPassCode4);
+//                    code1.setText("");
+//                    code2.setText("");
+//                    code3.setText("");
+//                    code4.setText("");
+
                 }
             }
 
@@ -204,11 +215,6 @@ public class MainActivity extends AppCompatActivity {
     public String checkInOutTime() {
         Date mcheckIn = new Date();
         SimpleDateFormat ft = new SimpleDateFormat("E yyyy.MM.dd 'at' HH:mm");
-
-        // Get the date today using Calendar object.
-        //Date today = Calendar.getInstance().getTime();
-// Using DateFormat format method we can create a string
-// representation of a date with the defined format.
 
         String reportDate = ft.format(mcheckIn);
         String rt = reportDate.toString();
