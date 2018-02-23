@@ -140,9 +140,16 @@ public class MainActivity extends AppCompatActivity {
                         db.getAllEmployee();
 
                     } else {
-                        db.addEmployee(new Employee(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]));
-                        Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKIN"
-                                , Toast.LENGTH_LONG).show();
+                        long rowInserted = db.addEmployee(new Employee(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]));
+
+                        if(rowInserted != -1) {
+                            Toast.makeText(MainActivity.this, "New row added, row id: " + rowInserted, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKIN"
+                                    , Toast.LENGTH_LONG).show();
+
+                        }else
+                            Toast.makeText(MainActivity.this, "Something wrong", Toast.LENGTH_SHORT).show();
+
                     }
 
                 }
@@ -166,10 +173,21 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,
                             "You entered wrong code. Press Clear Button", Toast.LENGTH_LONG).show();
                 } else {
-                    db.addEmployee(new Employee(employee, passCode, "checkout", currentDateTime[3], currentDateTime[1]));
+                    long rowInserted = db.addEmployee(new Employee(employee, passCode, "checkout", currentDateTime[3], currentDateTime[1]));
 
-                    Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKOUT"
-                            , Toast.LENGTH_LONG).show();
+                    if(rowInserted != -1) {
+                        Toast.makeText(MainActivity.this, "New row added, row id: " + rowInserted, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKOUT"
+                                , Toast.LENGTH_LONG).show();
+
+                    }else {
+                        Toast.makeText(MainActivity.this, "Something wrong", Toast.LENGTH_SHORT).show();
+
+                        //db.addEmployee(new Employee(employee, passCode, "checkout", currentDateTime[3], currentDateTime[1]));
+
+                        Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKOUT"
+                                , Toast.LENGTH_LONG).show();
+                    }
                 }
 
             }

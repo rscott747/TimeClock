@@ -60,7 +60,7 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     // Adding new employee
-    public void addEmployee(Employee employee) {
+    public long addEmployee(Employee employee) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -71,8 +71,9 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put(KEY_DATE, employee.get_date()); // employee check in or out date
 
         // Inserting Row
-        db.insert(TABLE_EMPLOYEE, null, values);
+        long rowInserted = db.insert(TABLE_EMPLOYEE, null, values);
         db.close(); // Closing database connection
+        return rowInserted;
     }
 
     // Getting single employee
