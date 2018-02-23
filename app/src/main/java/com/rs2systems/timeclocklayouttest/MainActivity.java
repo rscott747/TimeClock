@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private Button mCheckedIN;
     private Button mCheckedOUT;
 
+    private static final String SAMPLE_DB_NAME = "timeCard";
+    private static final String SAMPLE_TABLE_NAME = "Info";
+
+
     /*public TextView code1 = (TextView) findViewById(R.id.textPassCode1);
     public TextView code2 = (TextView) findViewById(R.id.textPassCode2);
     public TextView code3 = (TextView) findViewById(R.id.textPassCode3);
@@ -133,23 +137,13 @@ public class MainActivity extends AppCompatActivity {
                             "You entered wrong code. Press Clear Button", Toast.LENGTH_LONG).show();
                 } else {
                     if (employee.equals("Robert Scott")) {
-                        //tableToString(SQLiteDatabase db, String tableName);
-                        //printDataBase();
+                        db.getAllEmployee();
 
-                        
-
-                    } else
+                    } else {
                         db.addEmployee(new Employee(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]));
-                    Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKIN"
-                            , Toast.LENGTH_LONG).show();
-//                    TextView code1 = (TextView) findViewById(R.id.textPassCode1);
-//                    TextView code2 = (TextView) findViewById(R.id.textPassCode2);
-//                    TextView code3 = (TextView) findViewById(R.id.textPassCode3);
-//                    TextView code4 = (TextView) findViewById(R.id.textPassCode4);
-//                    code1.setText("");
-//                    code2.setText("");
-//                    code3.setText("");
-//                    code4.setText("");
+                        Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKIN"
+                                , Toast.LENGTH_LONG).show();
+                    }
 
                 }
             }
@@ -182,27 +176,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void printDataBase(){
+    public void printDataBase() {
 
     }
 
     public String tableToString(SQLiteDatabase db, String tableName) {
-        Log.d("","tableToString called");
+        Log.d("", "tableToString called");
         String tableString = String.format("Table %s:\n", tableName);
-        Cursor allRows  = db.rawQuery("SELECT * FROM " + tableName, null);
+        Cursor allRows = db.rawQuery("SELECT * FROM " + tableName, null);
         tableString += cursorToString(allRows);
         return tableString;
     }
 
-    public String cursorToString(Cursor cursor){
+    public String cursorToString(Cursor cursor) {
         String cursorString = "";
-        if (cursor.moveToFirst() ){
+        if (cursor.moveToFirst()) {
             String[] columnNames = cursor.getColumnNames();
-            for (String name: columnNames)
+            for (String name : columnNames)
                 cursorString += String.format("%s ][ ", name);
             cursorString += "\n";
             do {
-                for (String name: columnNames) {
+                for (String name : columnNames) {
                     cursorString += String.format("%s ][ ",
                             cursor.getString(cursor.getColumnIndex(name)));
                 }
@@ -225,9 +219,9 @@ public class MainActivity extends AppCompatActivity {
         int found = 0;
         String emp = "notfound";
         int code[] =
-                {1234, 4976,  5115, 5948, 5450};
+                {1234, 4976, 5115, 5948, 5450};
         String emps[] =
-                { "Robert Scott", "Fred",  "Marcus", "Kindra Edgestone", "Mashelle"};
+                {"Robert Scott", "Fred", "Marcus", "Kindra Edgestone", "Mashelle"};
 
         for (int i = 0; i < code.length; i++) {
             if (code[i] == checkCode) {

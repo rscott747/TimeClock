@@ -79,9 +79,9 @@ public class DBHandler extends SQLiteOpenHelper {
     public Employee getemployee(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursor = db.query(TABLE_EMPLOYEE, new String[] { KEY_ID,
-                        KEY_NAME, KEY_LOGIN_CODE, KEY_CHECK_INOUT, KEY_TIME }, KEY_ID + "=?",
-                new String[] { String.valueOf(id) }, null, null, null, null);
+        Cursor cursor = db.query(TABLE_EMPLOYEE, new String[]{KEY_ID,
+                        KEY_NAME, KEY_LOGIN_CODE, KEY_CHECK_INOUT, KEY_TIME}, KEY_ID + "=?",
+                new String[]{String.valueOf(id)}, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
 
@@ -146,15 +146,17 @@ public class DBHandler extends SQLiteOpenHelper {
 
         // updating row
         return db.update(TABLE_EMPLOYEE, values, KEY_ID + " = ?",
-                new String[] { String.valueOf(employee.get_id()) });
+                new String[]{String.valueOf(employee.get_id())});
     }
 
     // Deleting single employee
     public void deleteemployee(Employee employee) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_EMPLOYEE, KEY_ID + " = ?",
-                new String[] { String.valueOf(employee.get_id()) });
+                new String[]{String.valueOf(employee.get_id())});
         db.close();
     }
+
+
 
 }
