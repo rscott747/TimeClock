@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                         long rowInserted = db.addEmployee(new Employee(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]));
 
                         if(rowInserted != -1) {
-                            Toast.makeText(MainActivity.this, "New row added, row id: " + rowInserted, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "New row added, row id: " + rowInserted, Toast.LENGTH_LONG).show();
                             Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKIN"
                                     , Toast.LENGTH_LONG).show();
 
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
                     long rowInserted = db.addEmployee(new Employee(employee, passCode, "checkout", currentDateTime[3], currentDateTime[1]));
 
                     if(rowInserted != -1) {
-                        Toast.makeText(MainActivity.this, "New row added, row id: " + rowInserted, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "New row added, row id: " + rowInserted, Toast.LENGTH_LONG).show();
                         Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKOUT"
                                 , Toast.LENGTH_LONG).show();
 
