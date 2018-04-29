@@ -1,21 +1,28 @@
 package com.rs2systems.timeclocklayouttest;
 
+import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -26,9 +33,15 @@ public class MainActivity extends AppCompatActivity {
     private String passCode = "";
     private Button mCheckedIN;
     private Button mCheckedOUT;
+    DBHandler db;
 
     private static final String SAMPLE_DB_NAME = "timeCard";
     private static final String SAMPLE_TABLE_NAME = "Info";
+
+    private static final String FILE_NAME = "example.txt";
+
+    EditText mEditText;
+
 
 
     /*public TextView code1 = (TextView) findViewById(R.id.textPassCode1);
@@ -109,7 +122,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final DBHandler db = new DBHandler(this);
+        //final DBHandler db = new DBHandler(this);
+        openDB();
+        //db = new DBHandler(this);
+
+
 
         getSupportActionBar().hide();
         DateFormat df2 = new SimpleDateFormat("EEEEEEE d MMM");
@@ -137,18 +154,30 @@ public class MainActivity extends AppCompatActivity {
                             "You entered wrong code. Press Clear Button", Toast.LENGTH_LONG).show();
                 } else {
                     if (employee.equals("Robert Scott")) {
-                        db.getAllEmployee();
+                        //List<Employee> listing = db.getAllEmployee();
+
+                        //openDB();
+                        Intent databaseListing = new Intent(MainActivity.this, DatabaseList.class);
+                        startActivity(databaseListing);
+
+                        //save(listing);
 
                     } else {
-                        long rowInserted = db.addEmployee(new Employee(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]));
+                        long rowInserted = db.insertRow(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]);
+                        //long rowInserted = db.insertRow(new Employee(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]));
 
-                        if(rowInserted != -1) {
+                        if (rowInserted != -1) {
                             Toast.makeText(MainActivity.this, "New row added, row id: " + rowInserted, Toast.LENGTH_LONG).show();
                             Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKIN"
                                     , Toast.LENGTH_LONG).show();
 
-                        }else
-                            Toast.makeText(MainActivity.this, "Something wrong", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast toast = Toast.makeText(MainActivity.this, "Something wrong", Toast.LENGTH_SHORT);
+                            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+                            v.setTextColor(Color.RED);
+                            toast.show();
+                            //Toast.makeText(MainActivity.this, "Something wrong", Toast.LENGTH_SHORT).show();
+                        }
 
                     }
 
@@ -156,6 +185,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+
 
         mCheckedOUT.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,17 +204,17 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,
                             "You entered wrong code. Press Clear Button", Toast.LENGTH_LONG).show();
                 } else {
-                    long rowInserted = db.addEmployee(new Employee(employee, passCode, "checkout", currentDateTime[3], currentDateTime[1]));
+                    long rowInserted = db.insertRow(employee, passCode, "checkout", currentDateTime[3], currentDateTime[1]);
 
-                    if(rowInserted != -1) {
+                    if (rowInserted != -1) {
                         Toast.makeText(MainActivity.this, "New row added, row id: " + rowInserted, Toast.LENGTH_LONG).show();
                         Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKOUT"
                                 , Toast.LENGTH_LONG).show();
 
-                    }else {
+                    } else {
                         Toast.makeText(MainActivity.this, "Something wrong", Toast.LENGTH_SHORT).show();
 
-                        //db.addEmployee(new Employee(employee, passCode, "checkout", currentDateTime[3], currentDateTime[1]));
+                        db.insertRow(employee, passCode, "checkout", currentDateTime[3], currentDateTime[1]);
 
                         Toast.makeText(MainActivity.this, " " + ft + " " + employee + "  CHECKOUT"
                                 , Toast.LENGTH_LONG).show();
@@ -194,17 +225,89 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    private void populateListViewFromDB() {
+
+        //Cursor cusor = db.Get();
+    }
+
     public void printDataBase() {
 
     }
 
-    public String tableToString(SQLiteDatabase db, String tableName) {
-        Log.d("", "tableToString called");
-        String tableString = String.format("Table %s:\n", tableName);
-        Cursor allRows = db.rawQuery("SELECT * FROM " + tableName, null);
-        tableString += cursorToString(allRows);
-        return tableString;
+    private void openDB() {
+        db = new DBHandler(this);
+        db.open();
     }
+
+    private void closeDB(){
+        db.close();
+    }
+
+    public void save(List<Employee> list) {
+
+        boolean isAvailable= false;
+        boolean isWritable= false;
+        boolean isReadable= false;
+
+        String state = Environment.getExternalStorageState();
+        if(Environment.MEDIA_MOUNTED.equals(state)){
+
+            // Read and write operation possible
+            isAvailable= true;
+            isWritable= true;
+            isReadable= true;
+        } else if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)){
+            // Read operation possible
+            isAvailable= true;
+            isWritable= false;
+            isReadable= true;
+        } else {
+            // SD card not mounted
+            isAvailable = false;
+            isWritable= false;
+            isReadable= false;
+        }
+
+        String text = "This is a check to see if the file is being written...";
+
+        File file = new File(getFilesDir(), "history.txt");
+
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Employee data;
+        for (int i = 0; i < list.size(); i++) {
+
+            data = list.get(i);
+            String pnt = (data.get_id() + " " + data.get_login_code() + " "
+                    + data.get_name() + " " + data.get_check_inout()
+                    + " " + data.get_time() + " " + data.get_date());
+
+            String filename = "filename.txt";
+            file = new File(Environment.getExternalStorageDirectory(), filename);
+            FileOutputStream fos;
+            byte[] info = new String(pnt).getBytes();
+            try {
+                fos = new FileOutputStream(file);
+                fos.write(info);
+                fos.flush();
+                fos.close();
+            } catch (FileNotFoundException e) {
+                // handle exception
+            } catch (IOException e) {
+                // handle exception
+            }
+        }
+
+        Toast.makeText(this, "Saved to " + getFilesDir() + "/" + FILE_NAME,
+                Toast.LENGTH_LONG).show();
+
+    }
+
 
     public String cursorToString(Cursor cursor) {
         String cursorString = "";

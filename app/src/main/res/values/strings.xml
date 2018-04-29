@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TimeClock</string>
+    <string name="display_database_entries">Display Database entries</string>
 </resources>
