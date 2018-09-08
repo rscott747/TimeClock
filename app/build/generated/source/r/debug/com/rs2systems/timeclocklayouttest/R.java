@@ -2953,9 +2953,24 @@ public final class R {
     public static final int abc_shareactionprovider_share_with_application=0x7f0b001d;
     public static final int abc_toolbar_collapse_description=0x7f0b001e;
     public static final int app_name=0x7f0b001f;
-    public static final int display_database_entries=0x7f0b0020;
-    public static final int search_menu_title=0x7f0b0021;
-    public static final int status_bar_notification_info_overflow=0x7f0b0022;
+    public static final int checkOut=0x7f0b0020;
+    public static final int checkin=0x7f0b0021;
+    public static final int clear=0x7f0b0022;
+    public static final int del=0x7f0b0023;
+    public static final int display_database_entries=0x7f0b0024;
+    public static final int eight=0x7f0b0025;
+    public static final int five=0x7f0b0026;
+    public static final int four=0x7f0b0027;
+    public static final int nine=0x7f0b0028;
+    public static final int one=0x7f0b0029;
+    public static final int search_menu_title=0x7f0b002a;
+    public static final int seven=0x7f0b002b;
+    public static final int six=0x7f0b002c;
+    public static final int status_bar_notification_info_overflow=0x7f0b002d;
+    public static final int textview=0x7f0b002e;
+    public static final int three=0x7f0b002f;
+    public static final int two=0x7f0b0030;
+    public static final int zero=0x7f0b0031;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0c0000;

@@ -43,13 +43,6 @@ public class MainActivity extends AppCompatActivity {
     EditText mEditText;
 
 
-
-    /*public TextView code1 = (TextView) findViewById(R.id.textPassCode1);
-    public TextView code2 = (TextView) findViewById(R.id.textPassCode2);
-    public TextView code3 = (TextView) findViewById(R.id.textPassCode3);
-    public TextView code4 = (TextView) findViewById(R.id.textPassCode4);*/
-
-
     //private m
     Map<String, String> m = new Map<String, String>() {
         @Override
@@ -116,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,9 +116,6 @@ public class MainActivity extends AppCompatActivity {
 
         //final DBHandler db = new DBHandler(this);
         openDB();
-        //db = new DBHandler(this);
-
-
 
         getSupportActionBar().hide();
         DateFormat df2 = new SimpleDateFormat("EEEEEEE d MMM");
@@ -157,8 +146,8 @@ public class MainActivity extends AppCompatActivity {
                         //List<Employee> listing = db.getAllEmployee();
 
                         //openDB();
-                        Intent databaseListing = new Intent(MainActivity.this, DatabaseList.class);
-                        startActivity(databaseListing);
+                        //Intent databaseListing = );
+                        startActivity(new Intent(MainActivity.this, DatabaseList.class));
 
                         //save(listing);
 
@@ -185,8 +174,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
-
 
         mCheckedOUT.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -305,9 +292,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Saved to " + getFilesDir() + "/" + FILE_NAME,
                 Toast.LENGTH_LONG).show();
-
     }
-
 
     public String cursorToString(Cursor cursor) {
         String cursorString = "";
@@ -340,9 +325,9 @@ public class MainActivity extends AppCompatActivity {
         int found = 0;
         String emp = "notfound";
         int code[] =
-                {1234, 4976, 5115, 5948, 5450};
+                {7676, 4976, 5115, 5948, 5450, 4578};
         String emps[] =
-                {"Robert Scott", "Fred", "Marcus", "Kindra Edgestone", "Mashelle"};
+                {"Robert Scott", "Fred", "Tiera","Kindra Edgestone", "Schadwon", "Jaquis"};
 
         for (int i = 0; i < code.length; i++) {
             if (code[i] == checkCode) {
@@ -354,7 +339,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int submitChecking(String emp) {
-
 
         return 1;
     }

@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Robert\\Downloads\\AndroidN\\TimeClockLayoutTest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\4ecd5d558a16d1c92e1f73dbbc74e0e6\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\d4ceaa411795fcdab2835125570db96c\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
