@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Robert\\Downloads\\AndroidN\\TimeClockLayoutTest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\Robert\\AndroidN\\TimeClockLayoutTest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\f0ac55fe90d75dad663ca75608533feb\\res\\values-v16\\values-v16.xml",
