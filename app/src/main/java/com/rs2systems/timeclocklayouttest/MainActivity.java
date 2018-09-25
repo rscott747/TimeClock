@@ -3,9 +3,11 @@ package com.rs2systems.timeclocklayouttest;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
     private Button mCheckedIN;
     private Button mCheckedOUT;
     DBHandler db;
+    Intent chooser = null;
+
+
+
+
 
     private static final String SAMPLE_DB_NAME = "timeCard";
     private static final String SAMPLE_TABLE_NAME = "Info";
@@ -143,14 +150,7 @@ public class MainActivity extends AppCompatActivity {
                             "You entered wrong code. Press Clear Button", Toast.LENGTH_LONG).show();
                 } else {
                     if (employee.equals("Robert Scott")) {
-                        //List<Employee> listing = db.getAllEmployee();
-
-                        //openDB();
-                        //Intent databaseListing = );
                         startActivity(new Intent(MainActivity.this, DatabaseList.class));
-
-                        //save(listing);
-
                     } else {
                         long rowInserted = db.insertRow(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]);
                         //long rowInserted = db.insertRow(new Employee(employee, passCode, "checkin", currentDateTime[3], currentDateTime[1]));
@@ -190,7 +190,23 @@ public class MainActivity extends AppCompatActivity {
                 if (employee.equals("notfound")) {
                     Toast.makeText(MainActivity.this,
                             "You entered wrong code. Press Clear Button", Toast.LENGTH_LONG).show();
-                } else {
+                } if (employee.equals("Robert Scott")) {
+                    //TODO: add code to send email of database
+
+                    String bufferData = populateListViewFromDB();
+
+                    Intent myEmailIntend = new Intent(Intent.ACTION_SEND);
+                    myEmailIntend.setData(Uri.parse("mailto:"));
+                    String[] to=
+                            {"rdscott1320@gmail.com", "rscott747@comcast.net"};
+                    myEmailIntend.putExtra(Intent.EXTRA_EMAIL, to);
+                    myEmailIntend.putExtra(Intent.EXTRA_SUBJECT, "Payroll data");
+                    myEmailIntend.putExtra(Intent.EXTRA_TEXT, bufferData);
+                    myEmailIntend.setType("message/rfc822");
+                    chooser=Intent.createChooser(myEmailIntend, "Send Email");
+                    startActivity(chooser);
+
+                }else {
                     long rowInserted = db.insertRow(employee, passCode, "checkout", currentDateTime[3], currentDateTime[1]);
 
                     if (rowInserted != -1) {
@@ -212,10 +228,30 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private String populateListViewFromDB() {
+        Cursor c = db.getAllRows();
 
-    private void populateListViewFromDB() {
+        StringBuffer buffer = new StringBuffer();
+        while (c.moveToNext()) {
+            buffer.append("Id :"+ c.getString(0));
+            buffer.append(" "+ c.getString(1));
+            buffer.append(" "+ c.getString(2));
+            buffer.append(" "+ c.getString(3));
+            buffer.append(" "+ c.getString(4));
+            buffer.append(" "+ c.getString(5)+"\n");
+        }
 
-        //Cursor cusor = db.Get();
+        // Show all data
+        //showMessage("Data",buffer.toString());
+        return buffer.toString();
+    }
+
+    private void showMessage(String title, String Message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
     }
 
     public void printDataBase() {

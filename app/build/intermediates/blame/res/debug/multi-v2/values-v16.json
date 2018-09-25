@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Robert\\AndroidN\\TimeClockLayoutTest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\f0ac55fe90d75dad663ca75608533feb\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\4633e5fcedf5993684118f39212c307c\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\d4ceaa411795fcdab2835125570db96c\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\bcd07cb5ffd0dadff30c33d789b0ad31\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

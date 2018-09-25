@@ -24,12 +24,6 @@ public class DatabaseList extends Activity {
 
         openDB();
         populateListView();
-
-        // Get the data that was sent
-        //String previousActivity = activityThatCalled.getExtras().getString("callingActivity");
-        //TextView callingActivityMessage = (TextView)
-        //        findViewById(R.id.calling_activity_info_text_view);
-        //callingActivityMessage.append(" " + previousActivity);
     }
 
     private void openDB() {
