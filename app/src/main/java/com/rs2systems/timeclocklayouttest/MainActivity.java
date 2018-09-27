@@ -363,7 +363,7 @@ public class MainActivity extends AppCompatActivity {
         int code[] =
                 {7676, 4976, 5115, 5948, 5450, 4578};
         String emps[] =
-                {"Robert Scott", "Fred", "Tiera","Kindra Edgestone", "Schadwon", "Jaquis"};
+                {"Robert Scott", "Fred", "Blank User","Kindra Edgestone", "Schadwon", "Jaquis"};
 
         for (int i = 0; i < code.length; i++) {
             if (code[i] == checkCode) {
