@@ -506,6 +506,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen passCodeSize
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -876,6 +877,7 @@ string five
 string four
 string nine
 string one
+string robert_scott_sr
 string search_menu_title
 string seven
 string six

@@ -17,7 +17,6 @@
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="26dp"
-        android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextClock
@@ -35,18 +34,17 @@
         android:id="@+id/accountHolder_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Robert Scott SR"
+        android:text="@string/robert_scott_sr"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textClock2"
         android:layout_width="45dp"
-        android:layout_height="24dp"
+        android:layout_height="21dp"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textClock" />
 
@@ -68,6 +66,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="#8888"
+            android:textSize="@dimen/passCodeSize"
             android:gravity="center" />
 
         <TextView
@@ -75,6 +74,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="#8888"
+            android:textSize="@dimen/passCodeSize"
             android:gravity="center" />
 
         <TextView
@@ -82,6 +82,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="#8888"
+            android:textSize="@dimen/passCodeSize"
             android:gravity="center" />
 
         <TextView
@@ -89,6 +90,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="#8888"
+            android:textSize="@dimen/passCodeSize"
             android:gravity="center" />
     </GridLayout>
 
@@ -172,7 +174,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/checkin"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@+id/gridNumberPad" />
@@ -183,6 +186,7 @@
         android:layout_height="wrap_content"
         android:text="@string/checkOut"
         android:layout_marginTop="30dp"
+        android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/gridNumberPad"
         android:layout_marginRight="12dp"
         app:layout_constraintRight_toRightOf="parent" />

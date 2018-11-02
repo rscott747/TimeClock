@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <resources>
     <string name="app_name">TimeClock</string>
     <string name="display_database_entries">Display Database entries</string>
@@ -16,4 +17,5 @@
     <string name="del">Del</string>
     <string name="checkin">Checkin</string>
     <string name="checkOut">Checkout</string>
+    <string name="robert_scott_sr">Robert Scott SR</string>
 </resources>
