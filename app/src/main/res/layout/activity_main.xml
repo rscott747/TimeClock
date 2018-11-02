@@ -35,36 +35,32 @@
         android:id="@+id/accountHolder_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Robert Scott SR"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Robert Scott SR"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textClock2"
-        android:layout_width="36dp"
+        android:layout_width="45dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textClock" />
 
 
     <GridLayout
+        android:id="@+id/gridPasscode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:columnCount="4"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="8dp"
+        android:columnCount="4"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:id="@+id/gridPasscode"
-        android:layout_marginTop="32dp"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/accountHolder_textView">
 
         <TextView
@@ -72,25 +68,28 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="#8888"
-            android:gravity="center"/>
+            android:gravity="center" />
+
         <TextView
             android:id="@+id/textPassCode2"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="#8888"
-            android:gravity="center"/>
+            android:gravity="center" />
+
         <TextView
             android:id="@+id/textPassCode3"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="#8888"
-            android:gravity="center"/>
+            android:gravity="center" />
+
         <TextView
             android:id="@+id/textPassCode4"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="#8888"
-            android:gravity="center"/>
+            android:gravity="center" />
     </GridLayout>
 
 
@@ -109,63 +108,63 @@
 
         <Button
             android:id="@+id/btn1"
-            android:onClick="numberPressed"
-            android:text="@string/one" />
+            android:text="@string/one"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn2"
-            android:onClick="numberPressed"
-            android:text="@string/two" />
+            android:text="@string/two"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btn3"
-            android:onClick="numberPressed"
-            android:text="@string/three" />
+            android:text="@string/three"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn4"
-            android:onClick="numberPressed"
-            android:text="@string/four" />
+            android:text="@string/four"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn5"
-            android:onClick="numberPressed"
-            android:text="@string/five" />
+            android:text="@string/five"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn6"
-            android:onClick="numberPressed"
-            android:text="@string/six" />
+            android:text="@string/six"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn7"
-            android:onClick="numberPressed"
-            android:text="@string/seven" />
+            android:text="@string/seven"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn8"
-            android:onClick="numberPressed"
-            android:text="@string/eight" />
+            android:text="@string/eight"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn9"
-            android:onClick="numberPressed"
-            android:text="@string/nine" />
+            android:text="@string/nine"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btnClear"
-            android:onClick="numberPressed"
-            android:text="@string/clear" />
+            android:text="@string/clear"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn0"
-            android:onClick="numberPressed"
-            android:text="@string/zero" />
+            android:text="@string/zero"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btnDel"
-            android:onClick="numberPressed"
-            android:text="@string/del" />
+            android:text="@string/del"
+            android:textSize="20sp"/>
     </GridLayout>
 
     <Button
