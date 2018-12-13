@@ -317,9 +317,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int found = 0;
         String emp = "notfound";
         int code[] =
-                {7676, 4976, 5115, 5948, 5451, 4178};
+                {7676, 4976, 5115, 5948, 5451, 4567};
         String emps[] =
-                {"Robert Scott", "Fred", "Blank User", "Blank User", "Schadwon", "Blank User"};
+                {"Robert Scott", "Fred", "Blank User", "------", "Schadwon", "Keisha"};
 
         for (int i = 0; i < code.length; i++) {
             if (code[i] == checkCode) {
