@@ -335,76 +335,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return 1;
     }
 
-    /*public void numberPressed(View view) {
-
-
-        if (code.equals("Del")) {
-            // subtract one from position to
-            // get the correct to remove the code
-            codePosition -= 1;
-            String msg = "";
-            char[] myNameChars;
-            TextView codePrint;
-
-            switch (codePosition) {
-                case 1:
-                    code1.setText("");
-                    codePosition -= 1;
-                    // remove last code from the passCode file
-                    msg = passCode;
-                    myNameChars = msg.toCharArray();
-                    myNameChars = Arrays.copyOfRange(myNameChars, 0, 0);
-                    msg = String.valueOf(myNameChars);
-                    codePrint = (TextView) findViewById(R.id.textViewCode);
-                    codePrint.setText("");
-                    codePrint.setText(msg.toString());
-                    passCode = msg;
-
-                    // remove last code from the passCode file
-                    //int codeLength = passCode.length();
-                    break;
-                case 2:
-                    code2.setText("");
-                    codePosition -= 1;
-                    // remove last code from the passCode file
-                    msg = passCode;
-                    myNameChars = msg.toCharArray();
-                    myNameChars = Arrays.copyOfRange(myNameChars, 0, 1);
-                    msg = String.valueOf(myNameChars);
-                    codePrint = (TextView) findViewById(R.id.textViewCode);
-                    codePrint.setText("");
-                    codePrint.setText(msg.toString());
-                    passCode = msg;
-                    break;
-                case 3:
-                    code3.setText("");
-                    codePosition -= 1;
-                    // remove last code from the passCode file
-                    msg = passCode;
-                    myNameChars = msg.toCharArray();
-                    myNameChars = Arrays.copyOfRange(myNameChars, 0, 2);
-                    msg = String.valueOf(myNameChars);
-                    codePrint = (TextView) findViewById(R.id.textViewCode);
-                    codePrint.setText("");
-                    codePrint.setText(msg.toString());
-                    passCode = msg;
-                    break;
-                case 4:
-                    code4.setText("");
-                    codePosition -= 1;
-                    // remove last code from the passCode file
-                    msg = passCode;
-                    myNameChars = msg.toCharArray();
-                    myNameChars = Arrays.copyOfRange(myNameChars, 0, 3);
-                    msg = String.valueOf(myNameChars);
-                    codePrint = (TextView) findViewById(R.id.textViewCode);
-                    codePrint.setText("");
-                    codePrint.setText(msg.toString());
-                    passCode = msg;
-                    break;
-            }
-        }
-    }*/
 
     @Override
     public void onClick(View v) {
@@ -413,53 +343,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn0:
                 //TODO: change to method call to set correct passcode textview
                 setCodePosition(0);
-//                Toast.makeText(MainActivity.this, "btn0 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn1:
                 setCodePosition(1);
-//                Toast.makeText(MainActivity.this, "btn1 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn2:
                 setCodePosition(5);
-//                Toast.makeText(MainActivity.this, "btn2 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn3:
                 setCodePosition(3);
-//                Toast.makeText(MainActivity.this, "btn3 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn4:
                 setCodePosition(4);
-//                Toast.makeText(MainActivity.this, "btn4 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn5:
                 setCodePosition(5);
-//                Toast.makeText(MainActivity.this, "btn5 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn6:
                 setCodePosition(6);
-//                Toast.makeText(MainActivity.this, "btn6 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn7:
                 setCodePosition(7);
-//                Toast.makeText(MainActivity.this, "btn7 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn8:
                 setCodePosition(8);
-//                Toast.makeText(MainActivity.this, "btn8 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn9:
                 setCodePosition(9);
-//                Toast.makeText(MainActivity.this, "btn9 clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
 
 
@@ -470,8 +390,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 code4.setText("");
                 codePosition = 1;
                 passCode = "";
-//                Toast.makeText(MainActivity.this, "Clear clicked",
-//                        Toast.LENGTH_SHORT).show();
+
                 break;
             //TODO: Delete is not working
             case R.id.btnDel:
@@ -577,10 +496,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         } else {
                             Toast toast = Toast.makeText(MainActivity.this, "Something wrong", Toast.LENGTH_SHORT);
                             v = (TextView) toast.getView().findViewById(android.R.id.message);
-                            //v.setTextColor(Color.RED);
-                            //((TextView) v).setTextColor("wentWrong");
                             toast.show();
-                            //Toast.makeText(MainActivity.this, "Something wrong", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -638,8 +554,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
 
-   /*             Toast.makeText(MainActivity.this, "CheckOUT clicked",
-                        Toast.LENGTH_SHORT).show();*/
                 break;
         }
     }
