@@ -1,4 +1,4 @@
-package com.rs2systems.timeclocklayouttest;
+package com.rs2systems.timeclock;
 
 /**
  * Created by Robert on 10/19/2017.

@@ -19,33 +19,33 @@ INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5
 INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5:40-32:10
 INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5:40-32:10
 	package
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5:110-154
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5:110-144
 		INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml
 		INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5:181-206
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5:171-196
 		INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml
 		INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5:50-108
 	android:versionCode
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5:156-179
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:5:146-169
 		INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml
 		INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:7:210-76
+ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:7:200-76
 	android:name
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:7:227-283
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:7:217-273
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:8:288-76
+ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:8:278-76
 	android:name
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:8:305-360
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:8:295-350
 uses-permission#android.permission.INTERNET
-ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:9:365-63
+ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:9:355-63
 	android:name
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:9:382-424
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:9:372-414
 application
-ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:430-30:13
+ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:420-30:13
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Robert\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\11ee744957a6b8512f241c3eedea777b\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Robert\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\11ee744957a6b8512f241c3eedea777b\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Robert\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\62c7ab8abed62ffc170ba6bd2f1e3fd8\AndroidManifest.xml:9:5-20
@@ -69,35 +69,35 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Robert\.gradle\
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Robert\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\a7dd297cac5bc41e008352162bb7fbe5\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Robert\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\a7dd297cac5bc41e008352162bb7fbe5\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:594-620
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:584-610
 	android:label
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:511-543
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:501-533
 	android:roundIcon
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:546-591
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:536-581
 	android:icon
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:474-508
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:464-498
 	android:allowBackup
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:445-471
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:435-461
 	android:theme
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:624-655
-activity#com.rs2systems.timeclocklayouttest.MainActivity
-ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:19:659-25:13
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:18:614-645
+activity#com.rs2systems.timeclock.MainActivity
+ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:19:649-25:13
 	android:name
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:19:669-697
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:19:659-711
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:20:702-24:19
+ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:20:716-24:19
 action#android.intent.action.MAIN
-ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:21:722-56
+ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:21:736-56
 	android:name
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:21:730-771
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:21:744-785
 category#android.intent.category.LAUNCHER
-ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:23:780-63
+ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:23:794-63
 	android:name
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:23:790-837
-activity#com.rs2systems.timeclocklayouttest.DatabaseList
-ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:27:877-6
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:23:804-851
+activity#com.rs2systems.timeclock.DatabaseList
+ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:27:891-6
 	android:name
-		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:27:887-915
+		ADDED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml:27:901-953
 uses-sdk
 INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\AndroidN\TimeClockLayoutTest\app\src\main\AndroidManifest.xml

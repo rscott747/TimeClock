@@ -1,4 +1,4 @@
-package com.rs2systems.timeclocklayouttest;
+package com.rs2systems.timeclock;
 
 import org.junit.Test;
 

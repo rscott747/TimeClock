@@ -1,4 +1,4 @@
-package com.rs2systems.timeclocklayouttest;
+package com.rs2systems.timeclock;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -40,12 +40,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8,
             btn9, btn0, btnClear, btnDel;
 
-
     private TextView code1;
     private TextView code2;
     private TextView code3;
     private TextView code4;
-
 
     DBHandler db;
     Intent chooser = null;
@@ -162,7 +160,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mCheckedIN = (Button) findViewById(R.id.btnCheckIN);
         mCheckedOUT = (Button) findViewById(R.id.btnCheckOUT);
 
-
         //reg all btn with OnClickListener
         btn0.setOnClickListener(this);
         btn1.setOnClickListener(this);
@@ -188,7 +185,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         code4 = (TextView) findViewById(R.id.textPassCode4);
 
         TextView time;
-
     }
 
     private String populateListViewFromDB() {
@@ -203,9 +199,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             buffer.append(" " + c.getString(4));
             buffer.append(" " + c.getString(5) + "\n");
         }
-
-        // Show all data
-        //showMessage("Data",buffer.toString());
         return buffer.toString();
     }
 
@@ -335,7 +328,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return 1;
     }
 
-
     @Override
     public void onClick(View v) {
 
@@ -343,45 +335,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn0:
                 //TODO: change to method call to set correct passcode textview
                 setCodePosition(0);
-
                 break;
             case R.id.btn1:
                 setCodePosition(1);
-
                 break;
             case R.id.btn2:
                 setCodePosition(5);
-
                 break;
             case R.id.btn3:
                 setCodePosition(3);
-
                 break;
             case R.id.btn4:
                 setCodePosition(4);
-
                 break;
             case R.id.btn5:
                 setCodePosition(5);
-
                 break;
             case R.id.btn6:
                 setCodePosition(6);
-
                 break;
             case R.id.btn7:
                 setCodePosition(7);
-
                 break;
             case R.id.btn8:
                 setCodePosition(8);
-
                 break;
             case R.id.btn9:
                 setCodePosition(9);
-
                 break;
-
 
             case R.id.btnClear:
                 code1.setText("");
@@ -504,7 +485,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
            /*     Toast.makeText(MainActivity.this, "CheckIN clicked",
                         Toast.LENGTH_SHORT).show();*/
                 break;
-
 
             case R.id.btnCheckOUT:
                 currentDateTime = setDateTime();
