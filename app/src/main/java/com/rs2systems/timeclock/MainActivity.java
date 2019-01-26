@@ -312,7 +312,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int code[] =
                 {7676, 4976, 5115, 5948, 5451, 4567};
         String emps[] =
-                {"Robert Scott", "Fred", "Blank User", "Khadija ", "Schadwon", "Keisha"};
+                {"Robert Scott", "Bridget L.", "Misty A.", "Khadija ", "Schadwon", "Keisha"};
 
         for (int i = 0; i < code.length; i++) {
             if (code[i] == checkCode) {

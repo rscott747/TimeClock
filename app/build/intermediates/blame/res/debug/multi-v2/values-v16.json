@@ -4,7 +4,17 @@
             "outputFile": "C:\\AndroidN\\TimeClockLayoutTest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\11ee744957a6b8512f241c3eedea777b\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\f6f71a6bd69798875503dfeaa50845cc\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\cbbf34462aeba979a0772badcd13b0d5\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Robert\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\baa72b0dd605d4cbfb975e2833c9d166\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]
